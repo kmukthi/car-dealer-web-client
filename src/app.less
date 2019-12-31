@@ -1,0 +1,49 @@
+nav {
+  padding: 20px;
+  &.header {
+    background-color: #63b175;
+  }
+}
+
+.car-page {
+  display: flex;
+  width: 100%;
+  .cars-table {
+    width: 80%;
+  }
+  .filter {
+    width: 20%;
+    padding-right: 1%;
+  }
+}
+
+.filter-container {
+  padding-top: 0.75rem;
+  padding-bottom: 1rem;
+  .checkbox-container {
+    height: 8rem;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    padding-left: 0.5rem;
+  }
+}
+.cars-table {
+  #add-car-btn {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .table {
+    table-layout: fixed;
+    overflow-wrap: break-word;
+  }
+}
+
+.form-control:disabled,
+.form-check-input:disabled {
+  cursor: not-allowed;
+}
+.cars-from {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
