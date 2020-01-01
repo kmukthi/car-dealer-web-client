@@ -246,7 +246,7 @@ export function CarsPage({
         {loading ? (
           <Spinner />
         ) : cars.length === 0 ? (
-          <h4>Sorry ! We dont have any cars in stock, please add cars.</h4>
+          <h4>Sorry ! We dont have cars.</h4>
         ) : (
           <CarsList
             cars={cars}
