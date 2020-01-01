@@ -21,6 +21,7 @@ const NumberInput = ({
       <div className="field">
         <input
           type="number"
+          step="0.01"
           name={name}
           className="form-control"
           placeholder={placeholder}
