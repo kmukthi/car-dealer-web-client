@@ -10,10 +10,10 @@ const CarsList = ({ cars, showAnnualTotalCost = false, onDeleteClick }) => (
         <th>Model</th>
         <th>Version</th>
         <th>Year</th>
-        <th>Price</th>
+        <th>Price(€)</th>
         <th>Fuel(km/l)</th>
-        <th>Annual maintenance cost</th>
-        {showAnnualTotalCost && <th>Total annual cost</th>}
+        <th>Annual maintenance cost(€/year)</th>
+        {showAnnualTotalCost && <th>Total annual cost(€/year)</th>}
         {!showAnnualTotalCost && <th />}
       </tr>
     </thead>

@@ -24,7 +24,7 @@ const Filter = ({
         label=""
         value={makeSearchField}
         onChange={onHandleCheck}
-        disabled={disabled}
+        disabled={disabled || list.length === 0}
       />
       <div className="checkbox-container">
         {modifiedList.map(item => {

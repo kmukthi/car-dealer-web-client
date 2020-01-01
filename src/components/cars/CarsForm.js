@@ -46,7 +46,7 @@ const CarsForm = ({ car, onChange, onSave, saving = false, errors = {} }) => {
 
       <NumberInput
         name="price"
-        label="Price"
+        label="Price (€)"
         value={car.price.toString()}
         onChange={onChange}
         error={errors.price}
@@ -54,7 +54,7 @@ const CarsForm = ({ car, onChange, onSave, saving = false, errors = {} }) => {
 
       <NumberInput
         name="mileage"
-        label="Mileage"
+        label="Fuel(km/l"
         value={car.mileage.toString()}
         onChange={onChange}
         error={errors.mileage}
@@ -62,7 +62,7 @@ const CarsForm = ({ car, onChange, onSave, saving = false, errors = {} }) => {
 
       <NumberInput
         name="annualMaintenanceCost"
-        label="Annual Maintenance Cost"
+        label="Annual Maintenance Cost(€/year)"
         value={car.annualMaintenanceCost.toString()}
         onChange={onChange}
         error={errors.annualMaintenanceCost}

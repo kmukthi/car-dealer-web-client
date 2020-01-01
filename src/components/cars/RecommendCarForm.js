@@ -8,7 +8,8 @@ const RecommendCarForm = ({
   onHandleCheck,
   recommendCars,
   errors = {},
-  recommending = false
+  recommending = false,
+  disabled = false
 }) => {
   return (
     <form className="filter-container" onSubmit={onRecommend}>
@@ -35,7 +36,11 @@ const RecommendCarForm = ({
         error={errors.fuelPrice}
         disabled={!recommendCars.recommend}
       />
-      <button type="submit" disabled={recommending} className="btn btn-primary">
+      <button
+        type="submit"
+        disabled={recommending || disabled}
+        className="btn btn-primary"
+      >
         {recommending ? "Recommending..." : "Recommend"}
       </button>
     </form>
@@ -47,7 +52,8 @@ RecommendCarForm.propTypes = {
   recommendCars: PropTypes.object.isRequired,
   errors: PropTypes.object,
   onRecommend: PropTypes.func.isRequired,
-  recommending: PropTypes.bool
+  recommending: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 export default RecommendCarForm;
