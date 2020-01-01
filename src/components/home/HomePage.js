@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const HomePage = () => (
-  <div className="jumbotron">
+  <div className="">
     <h1> RHKDHV Cars</h1>
     <p>We simply give you the best cars with the best deals possible.</p>
     <p>
