@@ -1,0 +1,70 @@
+.burger-style {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2000;
+  //position: absolute;
+  //   top: 5%;
+  //   left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.open {
+    div:first-child {
+      transform: rotate(45deg);
+      background: #fff;
+    }
+    div:nth-child(2) {
+      opacity: 0;
+      transform: translateX(20px);
+      background: #fff;
+    }
+    div:nth-child(3) {
+      transform: rotate(-45deg);
+      background: #fff;
+    }
+    // & > div {
+    //   background: black;
+    // }
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    //background: ${({ theme, open }) => open ? theme.primaryDark : theme.primaryLight};
+    background: #007bff;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    &.first {
+      //transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: rotate(0);
+    }
+
+    &.second {
+      //opacity: ${({ open }) => open ? '0' : '1'};
+      opacity: 1;
+      //transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+      transform: translateX(0);
+    }
+
+    &.third {
+      //transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: rotate(0);
+    }
+  }
+}
