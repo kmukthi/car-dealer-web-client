@@ -4,7 +4,7 @@ const baseUrl = process.env.API_URL + "/car/";
 export function saveCar(car) {
   const id = car.id;
   return fetch(baseUrl + (id || ""), {
-    method: id ? "PUT" : "POST", // POST for create, PUT to update when id already exists.
+    method: id ? "PUT" : "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify(car)
   })
