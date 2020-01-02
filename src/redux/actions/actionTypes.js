@@ -11,9 +11,4 @@ export const SET_YEAR_CHECKBOX_VALUES = "SET_YEAR_CHECKBOX_VALUES";
 export const GET_INPUT_VALUES = "GET_INPUT_VALUES";
 export const GET_MAKE_CHECKBOX_VALUES = "GET_MAKE_CHECKBOX_VALUES";
 export const GET_YEAR_CHECKBOX_VALUES = "GET_YEAR_CHECKBOX_VALUES";
-// By convention, actions that end in "_SUCCESS" are assumed to have been the result of a completed
-// API call. But since we're doing an optimistic delete, we're hiding loading state.
-// So this action name deliberately omits the "_SUCCESS" suffix.
-// If it had one, our apiCallsInProgress counter would be decremented below zero
-// because we're not incrementing the number of apiCallInProgress when the delete request begins.
 export const DELETE_CAR_OPTIMISTIC = "DELETE_CAR_OPTIMISTIC";

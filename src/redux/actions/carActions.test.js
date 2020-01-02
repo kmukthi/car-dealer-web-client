@@ -5,7 +5,6 @@ import thunk from "redux-thunk";
 import fetchMock from "fetch-mock";
 import configureMockStore from "redux-mock-store";
 
-// Test an async action
 const middleware = [thunk];
 const mockStore = configureMockStore(middleware);
 
@@ -37,34 +36,28 @@ describe("Async Actions", () => {
 
 describe("createCarsSuccess", () => {
   it("should create a SAVE_CAR_SUCCESS action", () => {
-    //arrange
     const car = cars[0];
     const expectedAction = {
       type: types.SAVE_CAR_SUCCESS,
       car
     };
 
-    //act
     const action = carActions.saveCarSuccess(car);
 
-    //assert
     expect(action).toEqual(expectedAction);
   });
 });
 
 describe("deleteCarsOptimistic", () => {
   it("should create a DELETE_CAR_OPTIMISTIC action", () => {
-    //arrange
     const car = cars[0];
     const expectedAction = {
       type: types.DELETE_CAR_OPTIMISTIC,
       car
     };
 
-    //act
     const action = carActions.deleteCarsOptimistic(car);
 
-    //assert
     expect(action).toEqual(expectedAction);
   });
 });
