@@ -4,27 +4,24 @@ import initialState from "./reducers/initialState";
 import * as carActions from "./actions/carActions";
 
 it("should handle creating car", () => {
-  //arrange
   const store = createStore(rootReducer, initialState);
   const car = {
     make: "Ford"
   };
-  //act
+
   const action = carActions.saveCarSuccess(car);
   store.dispatch(action);
 
-  //assert
   const createdCar = store.getState().cars[0];
   expect(createdCar).toEqual(car);
 });
 
 it("should handle updating car", () => {
-  //arrange
   const store = createStore(rootReducer, initialState);
   const car = {
     make: "Ford"
   };
-  //act
+
   const action = carActions.saveCarSuccess(car);
   store.dispatch(action);
   const createdCar = store.getState().cars[0];
@@ -33,7 +30,6 @@ it("should handle updating car", () => {
   const updateAction = carActions.updateCarSuccess(createdCar);
   store.dispatch(updateAction);
 
-  //assert
   const updatedCar = store.getState().cars[0];
   expect(updatedCar.make).toEqual("Update_Ford");
 });
